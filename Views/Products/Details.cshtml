@@ -1,0 +1,20 @@
+﻿@model AspNetMvc.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="col">
+    <div class="card">
+        <h1 class="text-center">@Html.DisplayFor(model => model.Name)</h1>
+        <img src="@Html.DisplayFor(model => model.ImageUrl)" alt="..." class="card-img-top" />
+        <div class="card-body">
+            <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
+            <div class="card-text">
+                <p>@Html.DisplayFor(model => model.Short)</p>
+                <p>@Html.DisplayFor(model => model.Description)</p>
+                <p class="h5">Pris: <span class="text-danger">@Html.DisplayFor(model => model.Price) SEK</span></p>
+            </div>
+        </div>
+    </div>
+</div>
